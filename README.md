@@ -38,8 +38,6 @@ A full-stack newspaper digitization and OCR application that extracts searchable
 - PyMuPDF
 
 ## Project Structure
-
-```text
 newspaper-ocr/
 ├── backend/
 │   ├── app/
@@ -58,7 +56,8 @@ newspaper-ocr/
 │
 └── README.md
 
-How It Works
+
+### How It Works:
 1. User uploads a newspaper image or PDF.
 2. Backend validates and stores the file.
 3. OpenCV preprocesses the image to improve OCR quality.
@@ -68,28 +67,28 @@ How It Works
 7. Document metadata and OCR results are stored in PostgreSQL.
 8. Extracted content can be searched from the dashboard.
 
-Local Setup - 
-1. Backend - 
-
+### Local Setup:
+1. Backend
+```
 cd backend
 python -m venv venv
-
+```
 Activate the virtual environment:
-
+```
 .\venv\Scripts\Activate.ps1
-
+```
 Install dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 Create a .env file:
-
+```
 DATABASE_URL=postgresql://postgres:your_password@localhost:5432/newspaper_ocr
-
+```
 Start the backend:
-
+```
 uvicorn app.main:app --reload
-
+```
 Backend will run on:
 
 http://localhost:8000
@@ -100,13 +99,12 @@ http://localhost:8000/docs
 
 
 2. Frontend
-
 Open another terminal:
-
+```
 cd frontend
 npm install
 npm run dev
-
+```
 Frontend will run on:
 
 http://localhost:5173
