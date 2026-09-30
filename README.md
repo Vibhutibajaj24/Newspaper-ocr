@@ -38,6 +38,7 @@ A full-stack newspaper digitization and OCR application that extracts searchable
 - PyMuPDF
 
 ## Project Structure
+```
 newspaper-ocr/
 ├── backend/
 │   ├── app/
@@ -55,7 +56,7 @@ newspaper-ocr/
 │   └── package.json
 │
 └── README.md
-
+```
 
 ### How It Works:
 1. User uploads a newspaper image or PDF.
