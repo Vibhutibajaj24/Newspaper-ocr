@@ -1,15 +1,19 @@
+import os
 import pytesseract
 import pymupdf
 import cv2
 import numpy as np
 
+from dotenv import load_dotenv
 from PIL import Image
 from io import BytesIO
 
+load_dotenv()
 
-pytesseract.pytesseract.tesseract_cmd = (
-    r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-)
+TESSERACT_PATH = os.getenv("TESSERACT_PATH")
+
+if TESSERACT_PATH:
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
 
 def preprocess_image(image):
